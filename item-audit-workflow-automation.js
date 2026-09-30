@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      4.1.0
 // @description  Automates repetitive QA workflow by centralizing 30+ internal databases into a single draggable UI. Includes dynamic SPA auto-fill.
-// @author       Shedron Hall
+// @author       Shedron Hall Dennis
 // @license      MIT
 // @match        *://*/*
 // @grant        GM_openInTab
