@@ -1,20 +1,26 @@
-# Operational Workflow Automation Suite
+# Workflow Centralization Tool
+
+Tampermonkey userscript that opens all the tools needed to investigate an item from one ID.
 
 **Role context:** Risk Management & Quality Operations Project
-**Tech Stack:** JavaScript (ES6), DOM Manipulation, Tampermonkey API, MutationObserver API, HTML5 LocalStorage.
 
-## 📌 Business Problem
-Operations and Quality Assurance teams were experiencing severe efficiency bottlenecks due to extreme multi-tool fragmentation. Auditors were required to manually navigate through 30+ separate compliance tools and databases to complete a single audit tracking case, drastically increasing Average Handling Time (AHT) and human data-entry defects.
+## Problem
+Investigating one item meant opening about a dozen tools one by one and pasting the same ID
+into each, on every case.
 
-## 🚀 The Solution
-Designed and deployed a serverless frontend automation script that embeds a unified, draggable control center directly into the browser layer. 
+## Solution
+- First version: a browser extension (Simple Select and Search) that opened the common tools in two clicks.
+- Current version: a Tampermonkey script with all required links built in.
+  Enter the item ID and every tool opens with one click.
+- Detects the ID from the current page when possible and fills it in on the target tool.
 
-Key features include:
-* **Contextual Detection:** Automated matching logic that parses URLs or active DOM trees to dynamically extract transactional identifiers.
-* **Parallel Core Execution:** Consolidates multi-window workflows into single-click parallel browser queries without structural database overhead.
-* **SPA Integration Overrides:** Utilizes JavaScript native prototype setters combined with `MutationObserver` listening loops to bypass Single Page Application (React/Angular) lifecycle blocks, automatically populating context parameters into input workflows.
+## Result
+- Two clicks became one, and the ID no longer had to be copied by hand.
+- **[COMPLETAR: tiempo por caso antes y después, o cuántos casos por día. Si no lo mediste, borra esta línea.]**
 
-## 📈 Data-Driven Impact
-* **Efficiency:** Reduced manual data navigation time per quality audit by over 85%.
-* **SLA Compliance:** Successfully optimized workflow turnaround times, processing over 150 live cases seamlessly.
-* **Infrastructural Cost:** Implemented a 100% serverless client-side architecture requiring zero backend engineering resource allocation.
+## Built with
+JavaScript, Tampermonkey. Developed with AI assistance.
+
+## Note
+This public file is a sanitized skeleton: the interface is a placeholder and every URL is an
+example, so internal tools are not exposed.
