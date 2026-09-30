@@ -2,15 +2,14 @@
 // @name         Workflow Centralization & Audit Tool
 // @namespace    http://tampermonkey.net/
 // @version      4.1.0
-// @description  Automates repetitive QA workflow by centralizing 30+ internal databases into a single draggable UI. Includes dynamic SPA auto-fill.
+// @description  Opens the tools needed for an item audit from a single ID.
 // @author       Shedron Hall Dennis
 // @license      MIT
-// @match        *://*/*
+// @match        *://*.example.com/*
 // @grant        GM_openInTab
 // @grant        GM_addStyle
 // @grant        GM_getValue
 // @grant        GM_setValue
-// @grant        GM_addValueChangeListener
 // ==/UserScript==
 
 (function () {
@@ -18,6 +17,7 @@
 
 // BUSINESS IMPACT: This script centralizes fragmented workflows, reducing handling time 
 // by opening context-specific internal tools simultaneously with pre-filled parameters.
+// Sanitized skeleton: the modal shows a placeholder and tool URLs are examples
 
 var SCRIPT_META = {
     project: 'Workflow Centralization Tool',
@@ -149,7 +149,6 @@ document.body.appendChild(floatBtn);
 
 // =====================================================================
 // MODULE: SINGLE PAGE APPLICATION (SPA) AUTO-FILL
-// BUSINESS IMPACT: Saves hundreds of hours by eliminating manual data entry in legacy systems.
 // =====================================================================
 (function dynamicAppAutoFill() {
     if (!window.location.hostname.includes('internal-tool')) return;
